@@ -16,7 +16,7 @@ if __name__ == "__main__":
       else:
           names[name] = 1
  
-  # 迭代字典,
+  # 迭代字典
   # 输出名字，空格，接着是该名字出现的数量
-  for name, count in names.iteritems():
+  for name, count in names.items():
       sys.stdout.write("%d\t%s\n" % (count, name))
