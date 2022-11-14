@@ -7,9 +7,7 @@
 #PBS -q four
 cd $PBS_O_WORKDIR
 
-#| /gpfshome/home/Changq/miniconda3/envs/rna/bin/samtools view -bS > ${id}.bam
-
-#~/rice_virus/RRSV_index/RRSV
+# alignment reference genome
 
 
-cat file.txt|while read id;do /gpfshome/home/Changq/miniconda3/envs/rna/bin/bowtie2 -x /gpfshome/home/Changq/MSU7/bt2_index/Os -U ../Cleandata/trim_${id}.fq.gz -S ${id}.sam;done
+bowtie -v 0 -p 8 -x reference_index/ref -a -m 50 -q data.fastq -S data.sam 2>align_rate.txt
