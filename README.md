@@ -1,1 +1,1 @@
-# small RNA-seq_analysis step
+Small RNA-seq analysis
